@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import { Image } from 'astro:assets';
+import { getPodcastWordpressGraphQL} from '../services/api-wordpress';
+const data = await getPodcastWordpressGraphQL();
+
+function removerEtiquetasHTML(params : string){
+	let valor = params.replace(/<[^>]*>/g,'');
+	return valor.slice(0,120);
+}
+---
+
+<Layout title="Podcast CARE">
+	<main>
+		<h1>Podcast <span class="text-gradient">CARE</span></h1>
+		<div id="listado-podcast">
+			{
+				data.podcasts.nodes.map((item : any) => {
+					let imagen = item.featuredImage.node.mediaItemUrl;
+					return(
+						<div>
+						<img src={imagen} width="100%" height="270px" alt="Podcast"/>
+							<div class="item-podcast">
+							<h3>{item.title}</h3>
+							<hr/>
+							{item.id}
+						    <p>{removerEtiquetasHTML(item.content)}</p>
+							<a href={`podcasts/${item.id}`}><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z" /></svg> Reproducir</a>
+							</div>
+						</div>
+					)
+				})
+			}
+
+		</div>
+		
+	</main>
+</Layout>
+
+<style is:global>
+	main{width:100%; max-width:1200px; margin:0px auto; display:block;}
+</style>
+<style>
+	div#listado-podcast{display:flex; flex-direction:row; justify-content: flex-start; flex-wrap:wrap; gap:15px;}
+	div#listado-podcast > div{flex-basis:24%; margin-bottom:50px;}
+	div#listado-podcast > div > div.item-podcast{-webkit-box-shadow: 10px 10px 5px -3px rgba(235,235,235,1);
+	-moz-box-shadow: 10px 10px 5px -3px rgba(235,235,235,1);
+	box-shadow: 10px 10px 5px -3px rgba(235,235,235,1);}
+	div#listado-podcast > div > div.item-podcast{padding:10px 5px 10px 5px; height:280px;}
+	div#listado-podcast > div > div.item-podcast > h3{color:black; font-weight:600;  margin:0px; font-size: 16px; min-height: 80px; font-family:'Poppins';}
+	div#listado-podcast > div > div.item-podcast > p{font-size:14px;}
+	div#listado-podcast > div > div.item-podcast > a{color:#cba035; display:flex; text-decoration: none;}
+</style>

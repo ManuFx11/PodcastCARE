@@ -1,0 +1,28 @@
+---
+const {apple,amazon,spotify,google} = Astro.props;
+
+---
+<div class="plataformas-podcast">
+
+    <div class="plat-podcast">
+       <a target="_blank" href={spotify}><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-spotify" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M8 11.973c2.5 -1.473 5.5 -.973 7.5 .527" /><path d="M9 15c1.5 -1 4 -1 5 .5" /><path d="M7 9c2 -1 6 -2 10 .5" /></svg>Escuchar en Spotify </a>
+    </div>
+
+    <div class="plat-podcast">
+        <a href={amazon}><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-amazon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 12.5a15.198 15.198 0 0 1 -7.37 1.44a14.62 14.62 0 0 1 -6.63 -2.94" /><path d="M19.5 15c.907 -1.411 1.451 -3.323 1.5 -5c-1.197 -.773 -2.577 -.935 -4 -1" /></svg>Escuchar en Amazon Music </a>
+    </div>
+
+    <div class="plat-podcast">
+        <a href={apple}><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-apple-podcast" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 18.364a9 9 0 1 0 -12.728 0" /><path d="M11.766 22h.468a2 2 0 0 0 1.985 -1.752l.5 -4a2 2 0 0 0 -1.985 -2.248h-1.468a2 2 0 0 0 -1.985 2.248l.5 4a2 2 0 0 0 1.985 1.752z" /><path d="M12 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /></svg>Escuchar en Apple Podcast</a>
+    </div>
+
+
+    <div class="plat-podcast">
+        <a href={google}><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20.945 11a9 9 0 1 1 -3.284 -5.997l-2.655 2.392a5.5 5.5 0 1 0 2.119 6.605h-4.125v-3h7.945z" /></svg>Escuchar en Google Podcast</a>
+    </div>
+
+</div>
+<style>
+    div.plataformas-podcast{display:flex; flex-direction:column; gap:10px;}
+    div.plataformas-podcast > div.plat-podcast > a{color:black; text-decoration:none; display:flex; align-items:center; gap:5px; padding:5px; border-radius:10px; background-color:rgb(234, 234, 234);}
+</style>
