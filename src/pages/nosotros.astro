@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import imagen from '../../public/que-es-care.png';
+import { Image } from 'astro:assets';
+---
+
+<Layout title="Podcast CARE">
+	<main>
+		<div id="content-about">
+			<div>
+				<h1>Qué es <strong>CARE</strong></h1>
+				<p>En CARE vas a encontrar ese lugar exclusivo en el que conocer a empresarios, aprender de ellos, formarte con expertos en áreas que te ayudan a sacar más partido a tu negocio, obtener mayor visibilidad de lo que haces y establecer relaciones de calidad que hagan que las ventas de tu negocio aumenten.</p>
+				<p>Pero sobre todo estarás en un Club de PERSONAS, donde lo más importante son las relaciones personales y profesionales, por delante de las transacciones comerciales.</p>
+				<p>En un ambiente de confianza y seguridad, las ventas llegarán de manera natural. </p>
+				<p>No es un Club comercial, y el acceso es exclusivo a través de una entrevista personal con las personas que dirigen el Club.</p>
+			</div>
+
+			<div>
+				<Image src={imagen} alt="Qué es Care"/>
+			</div>
+
+		</div>
+	</main>
+</Layout>
+<style>
+	main{width:100%; max-width:1200px; margin:0px auto; display:block;}
+	div#content-about{display:flex; flex-direction: row; justify-content: space-between; margin-top:50px; align-items:center;}
+	div#content-about > div:first-child{padding-right:60px;}
+	div#content-about > div:last-child{max-width:520px; width:100%;}
+</style>
