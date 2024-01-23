@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import { Image } from 'astro:assets';
+import cabeceraFondo from '../../public/PodcastsCare.webp';
 import { getPodcastWordpressGraphQL} from '../services/api-wordpress';
 const data = await getPodcastWordpressGraphQL();
 
@@ -9,11 +8,24 @@ function removerEtiquetasHTML(params : string){
 	let valor = params.replace(/<[^>]*>/g,'');
 	return valor.slice(0,120);
 }
+console.log(cabeceraFondo);
 ---
 
 <Layout title="Podcast CARE">
-	<main>
-		<h1>Podcast <span class="text-gradient">CARE</span></h1>
+	<!-- Componente Banner -->
+	<div id="banner-podcast" style=`background-image:url(${cabeceraFondo.src});`>
+		<main>
+			<div>
+				<h1><strong>Podcast</strong> CARE</h1>
+				<p>Bienvenido/a al podcast del Club de Alto rendimiento empresarial. Un podcast en el que te contaré todo lo que a mi me hubiese gustado que me contaran cuando comencé con mi empresa.</p>
+				<p>Cada semana hablaremos sobre <strong>marketing digital, estrategias de negocio, ventas, productividad, inversiones </strong>, y todo aquello que necesitarás como emprendedor, o como empresario ya consolidado, para mejorar tu conocimiento y hacer mucho más rentable tu empresa.</p>
+				<p> <strong>Escuchalo en las siguientes plataformas</strong></p>
+			</div>
+		</main>
+	</div>
+
+	<main>		
+		<center><h1 class="cabecera-titulo">Últimos <span class="text-gradient">Podcast</span></h1></center>
 		<div id="listado-podcast">
 			{
 				data.podcasts.nodes.map((item : any) => {
@@ -50,4 +62,7 @@ function removerEtiquetasHTML(params : string){
 	div#listado-podcast > div > div.item-podcast > h3{color:black; font-weight:600;  margin:0px; font-size: 16px; min-height: 80px; font-family:'Poppins';}
 	div#listado-podcast > div > div.item-podcast > p{font-size:14px;}
 	div#listado-podcast > div > div.item-podcast > a{color:#cba035; display:flex; text-decoration: none;}
+	div#banner-podcast{background-size:100% 520px; height:550px; background-repeat:no-repeat;}
+	div#banner-podcast > main > div{width:100%; max-width:500px; float:left; margin-top:50px;}
+	h1.cabecera-titulo{margin-bottom:45px;}
 </style>
