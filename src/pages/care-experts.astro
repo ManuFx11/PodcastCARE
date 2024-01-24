@@ -1,8 +1,36 @@
 --- 
 import Layout from "../layouts/Layout.astro";
+import cabeceraFondo from "../../public/Black-Elegant-Workout-Tips-YouTube-Channel-Art-1.webp";
+import cabeceraFran from "../../public/FranciscoRubio-CARE-1.webp";
+import '../styles/styles.css';
+import CareExpertsBlock from "../components/Experts";
 ---
 <Layout title="CARE Experts">
+    <div id="banner-podcast" style=`background-image:url(${cabeceraFondo.src});` class="bottom-background">
+		<main>
+			<main>
+                <div id="flex-care-experts">
+                    <div>
+                        <h1><strong style="color:#cba036;">CARE</strong> Experts</h1>
+                        <p>En el Club de Alto Rendimiento Empresarial contamos con profesionales destacados en sus sectores que te darán a conocer, a través de <strong>masterclass</strong>, todo lo necesario para que avances con tu empresa</p>
+                        <p><strong>Importante:</strong> no son profesores, <strong> son empresarios y empresarias </strong>que ya han resuelto muchos de los problemas que te vas a encontrar en tu día a día.</p>
+                        <a class="btn-dorado" href="#">Ver masterclass (solo para suscriptores disponible próximamente)</a>
+                    </div>
+                        <picture>
+                            <img src={cabeceraFran.src} title="Francisco Rubio - CARE Experts"/>
+                        </picture>
+                </div>
+            </main>
+		</main>
+	</div>
     <main>
-       
+        <center><h1 class="cabecera-titulo">Nuestros <span class="text-gradient">Expertos</span></h1></center>
+        <CareExpertsBlock/>
     </main>
 </Layout>
+<style>
+   div#banner-podcast > main > div#content-care-experts{width:1200px; margin:0 auto; display:flex; flex-direction:row; justify-content: space-between;}
+    div#flex-care-experts{display:flex; flex-direction:row;justify-content: space-between; align-items:center; color:#FFF;}
+    .bottom-background{background-position:bottom;}
+    .btn-dorado{background-color:#cba036; color:#FFF; text-decoration:none; padding:10px 20px; border-radius:5px; margin-top:30px; display:block; width:fit-content; }
+</style>

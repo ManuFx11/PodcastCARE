@@ -1,8 +1,9 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
-export default function CareExperts(){
+export default function CareExpertsBlock(){
 
-    const [experts, setExperts] = useState();
+    const [experts, setExperts] = useState([]);
+    let expertos = [];
 
     async function fetchExperts(){
 
@@ -16,25 +17,26 @@ export default function CareExperts(){
               'Content-Type':'application/json',
             },
             body : JSON.stringify({
-                query: `{
-                    podcasts {
-                    nodes {
-                      id
-                      title
-                      content
-                      featuredImage {
-                        node {
-                          mediaItemUrl
-                        }
-                      }
+              query: `{
+                podcasts {
+                nodes {
+                  id
+                  title
+                  content
+                  featuredImage {
+                    node {
+                      mediaItemUrl
                     }
                   }
                 }
-                `
+              }
+            }
+              `
             })});
 
             const {data} = await response.json();
-            setExperts(data);
+            expertos = data;
+            console.log(expertos);
     }
 
     useEffect(() => {
@@ -42,13 +44,9 @@ export default function CareExperts(){
     }, []);
 
     return(
-        <>
-          {experts.map((item) => {
-            return(
-                <h1>{item.title}</h1>
-            )
-          })}
-        </>
+      <>
+        <h1>Prueba</h1>
+      </>
     )
 
 }

@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro';
+import '../styles/styles.css';
 import '@fontsource/poppins';
 import {ViewTransitions} from 'astro:transitions';
 
@@ -31,4 +32,5 @@ const { title } = Astro.props;
 		font-family: 'Poppins',system-ui, sans-serif;
 		background: #fff;
 	}
+	main{width:100%; max-width:1200px; margin:0px auto; display:block;}
 </style>

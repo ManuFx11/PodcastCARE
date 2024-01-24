@@ -1,0 +1,13 @@
+	body{margin:0px; padding:0px;}
+	div#listado-podcast{display:flex; flex-direction:row; justify-content: flex-start; flex-wrap:wrap; gap:15px;}
+	div#listado-podcast > div{flex-basis:24%; margin-bottom:50px;}
+	div#listado-podcast > div > div.item-podcast{-webkit-box-shadow: 10px 10px 5px -3px rgba(235,235,235,1);
+	-moz-box-shadow: 10px 10px 5px -3px rgba(235,235,235,1);
+	box-shadow: 10px 10px 5px -3px rgba(235,235,235,1);}
+	div#listado-podcast > div > div.item-podcast{padding:10px 5px 10px 5px; height:280px;}
+	div#listado-podcast > div > div.item-podcast > h3{color:black; font-weight:600;  margin:0px; font-size: 16px; min-height: 80px; font-family:'Poppins';}
+	div#listado-podcast > div > div.item-podcast > p{font-size:14px;}
+	div#listado-podcast > div > div.item-podcast > a{color:#cba035; display:flex; text-decoration: none;}
+	div#banner-podcast{background-size:cover; height:550px; background-repeat:no-repeat;}
+	div#banner-podcast > main > div{width:100%; max-width:650px; float:left; margin-top:50px;}
+	h1.cabecera-titulo{margin-bottom:45px;}
