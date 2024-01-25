@@ -5,14 +5,11 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'hybrid',
   image: {
     remotePatterns: [{
       protocol: "https"
     }]
   },
   integrations: [react()],
-  adapter: vercel({
-    edgeMiddleware: true,
-  })
+  adapter: vercel()
 });
