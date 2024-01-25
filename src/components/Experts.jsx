@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 
-export default function CareExpertsBlock(){
+export function CareExpertsBlock(){
 
     const [experts, setExperts] = useState([]);
     let expertos = [];

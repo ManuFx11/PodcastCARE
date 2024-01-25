@@ -9,6 +9,16 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+//Importo URQL
+import { Client,Provider, cacheExchange, fetchExchange } from 'urql';
+
+const client = new Client({
+  url: 'https://clubdealtorendimientoempresarial.com/graphql',
+  exchanges: [cacheExchange, fetchExchange]
+});
+
+
 ---
 
 <!doctype html>
@@ -24,7 +34,9 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<Header/>
-		<slot />
+		<Provider value={client}>
+			<slot/>
+		</Provider>
 	</body>
 </html>
 <style is:global>

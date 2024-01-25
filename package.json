@@ -16,8 +16,12 @@
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "astro": "^4.1.1",
+    "axios": "^1.6.6",
+    "graphql": "^16.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.3.3"
+    "react-query": "^3.39.3",
+    "typescript": "^5.3.3",
+    "urql": "^4.0.6"
   }
 }
