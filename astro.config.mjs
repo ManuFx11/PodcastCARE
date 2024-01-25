@@ -10,6 +10,5 @@ export default defineConfig({
       protocol: "https"
     }]
   },
-  integrations: [react()],
-  adapter: vercel()
+  integrations: [react()]
 });
