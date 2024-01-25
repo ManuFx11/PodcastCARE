@@ -1,0 +1,56 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PlataformasAstro from '../../components/Plataformas.astro';
+import {getPodcastWordpressRutasID, getPodcastWordpressID} from '../../services/api-wordpress';
+//ID
+const {id} = Astro.params;
+
+const data = await getPodcastWordpressID(id);
+let imagen = data.podcast.featuredImage.node.mediaItemUrl;
+const podcast = data.podcast;
+
+export async function getStaticPaths(){
+    //llamamos a una API externa para montar todas las ids que debes generar
+    const data = await getPodcastWordpressRutasID();
+    return data.podcasts.nodes.map((podcast : any) => ({
+    params : {id : podcast.id}
+    }))
+}
+
+---
+<Layout title="Podcast CARE">
+    <main>
+        <article>
+            <div id="contenido-podcast">
+                <div class="left-podcast">
+                  <img src={imagen}/>
+                  <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-playlist" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M17 17v-13h4" /><path d="M13 5h-10" /><path d="M3 9l10 0" /><path d="M9 13h-6" /></svg>Escuchalo donde quieras</p>
+                  <div>
+                    <PlataformasAstro 
+                        spotify = {podcast.cptPodcasts.spotifyPodcast}
+                        amazon = {podcast.cptPodcasts.amazonMusic}
+                        google = {podcast.cptPodcasts.googlePodcast}
+                        apple = {podcast.cptPodcasts.applePodcast}
+                    />
+                  </div>
+                </div>
+                <div class="right-podcast">
+                    <h1>{podcast.title}</h1>
+                    <Fragment set:html={podcast.cptPodcasts.apartadoContenido}></Fragment>
+                    <div class="content-podcast">
+                        <Fragment set:html={data.podcast.content}></Fragment>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+</Layout>
+<style>
+   	main{width:100%; max-width:1200px; margin:0px auto; display:block;}
+    div#contenido-podcast{display:flex; gap:40px; flex-direction:row; margin-top:60px; justify-content: space-between;}
+    div.left-podcast{max-width:420px;width:100%; flex-basis:content; position:sticky; top:20px; height:800px;}
+    div.left-podcast > img{width:100%;}
+    div.left-podcast > p{color:#cba036; display:flex; align-items: center;}
+    div.right-podcast{flex-basis:fill;}
+    div.right-podcast > h1{font-size:28px; font-weight:bold; font-family:'Poppins';}
+</style>
