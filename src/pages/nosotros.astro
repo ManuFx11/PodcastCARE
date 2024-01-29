@@ -1,30 +1,69 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import imagen from '../../public/que-es-care.png';
+import sobreNosotros from '../../public/sobre-nosotros.webp';
+import fotoFran from '../../public/fran.webp';
 import { Image } from 'astro:assets';
 ---
 
 <Layout title="Podcast CARE">
+  <section id="franja1">
 	<main>
-		<div id="content-about">
+   		<div id="content-about">
 			<div>
 				<h1>Qué es <strong>CARE</strong></h1>
-				<p>En CARE vas a encontrar ese lugar exclusivo en el que conocer a empresarios, aprender de ellos, formarte con expertos en áreas que te ayudan a sacar más partido a tu negocio, obtener mayor visibilidad de lo que haces y establecer relaciones de calidad que hagan que las ventas de tu negocio aumenten.</p>
+				<p>En CARE vas a encontrar ese <strong>lugar exclusivo</strong> en el que conocer a empresarios, aprender de ellos, formarte con expertos en áreas que te ayudan a sacar más partido a tu negocio, obtener mayor visibilidad de lo que haces y establecer relaciones de calidad que hagan que las ventas de tu negocio aumenten.</p>
 				<p>Pero sobre todo estarás en un Club de PERSONAS, donde lo más importante son las relaciones personales y profesionales, por delante de las transacciones comerciales.</p>
 				<p>En un ambiente de confianza y seguridad, las ventas llegarán de manera natural. </p>
 				<p>No es un Club comercial, y el acceso es exclusivo a través de una entrevista personal con las personas que dirigen el Club.</p>
 			</div>
-
 			<div>
 				<Image src={imagen} alt="Qué es Care"/>
 			</div>
+		   </div>
+		</main>	
+	</section>
 
-		</div>
-	</main>
+
+	<section id="franja2">
+		<main>
+			   <div id="content-about">
+				<div>
+					<Image src={sobreNosotros} alt="Qué es Care"/>
+				</div>
+				<div>
+					<h1><strong>Te quiero contar por qué nace la idea del </strong> CLUB</strong></h1>
+					<p>En CARE vas a encontrar ese <strong>lugar exclusivo</strong> en el que conocer a empresarios, aprender de ellos, formarte con expertos en áreas que te ayudan a sacar más partido a tu negocio, obtener mayor visibilidad de lo que haces y establecer relaciones de calidad que hagan que las ventas de tu negocio aumenten.</p>
+					<p>Pero sobre todo estarás en un Club de PERSONAS, donde lo más importante son las relaciones personales y profesionales, por delante de las transacciones comerciales.</p>
+					<p>En un ambiente de confianza y seguridad, las ventas llegarán de manera natural. </p>
+					<p>No es un Club comercial, y el acceso es exclusivo a través de una entrevista personal con las personas que dirigen el Club.</p>
+				</div>
+			   </div>
+			</main>	
+	</section>
+
+
+	<section id="franja1">
+		<main>
+			   <div id="content-foto">
+				<div>
+					<h1><strong>Qué es el networking y </strong>cómo puedo ayudarte</h1>
+					<p>Empecé con la oficina en mi casa. No pude hacerlo en un garaje como las grandes empresas de Sillicon Valley, pero no importaba. Lo que realmente importaba era las ganas. </p>
+					<p>Y desde entonces como te decía más arriba ha sido un camino muy largo. Con grandes aciertos y con grandes errores. La clave está en aprender de lo que te sale bien (para repetirlo) y de lo que no te sale tan bien (para ver por qué no te ha funcionado e intentar no cometerlo más veces). </p>
+					<p>Hace un par de años decidí interesarme por los grupos de Networking. Que más o menos vienen a ser un lugar en el que conoces a otros profesionales y en donde puedes hacer negocio. </p>
+					<p>Es como un grupo de colegas pero todos vestidos con traje y corbata. Imagina que tienes un amigo que es pintor, y que te ha demostrado con el tiempo que quita el gotelé como si fuera Miguel Ángel. Y ahora imagina que alguien te habla que quiere pintar su casa y tú le recomiendas a tu amigo pintor. </p>
+					<p>Eso es lo que sucede en los clubs de Networking explicado de una forma muy simple. </p>
+				</div>
+				<div>
+					<Image style="width:100%;height:770px;" src={fotoFran} alt="Qué es Care"/>
+				</div>
+				
+			   </div>
+			</main>	
+		</section>
+
+
 </Layout>
 <style>
 	main{width:100%; max-width:1200px; margin:0px auto; display:block;}
-	div#content-about{display:flex; flex-direction: row; justify-content: space-between; margin-top:50px; align-items:center;}
-	div#content-about > div:first-child{padding-right:60px;}
-	div#content-about > div:last-child{max-width:520px; width:100%;}
 </style>

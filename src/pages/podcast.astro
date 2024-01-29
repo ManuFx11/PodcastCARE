@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import cabeceraFondo from '../../public/PodcastsCare.webp';
+import { getPodcastWordpressGraphQL} from '../services/api-wordpress';
+const data = await getPodcastWordpressGraphQL();
+
+
+function removerEtiquetasHTML(params : string){
+	let valor = params.replace(/<[^>]*>/g,'');
+	return valor.slice(0,120);
+}
+console.log(cabeceraFondo);
+---
+
+<Layout title="Podcast CARE">
+	<!-- Componente Banner -->
+	<div id="banner-podcast" style=`background-image:url(${cabeceraFondo.src});`>
+		<main>
+			<div>
+				<h1><strong>Podcast</strong> CARE</h1>
+				<p>Bienvenido/a al podcast del Club de Alto rendimiento empresarial. Un podcast en el que te contaré todo lo que a mi me hubiese gustado que me contaran cuando comencé con mi empresa.</p>
+				<p>Cada semana hablaremos sobre <strong>marketing digital, estrategias de negocio, ventas, productividad, inversiones </strong>, y todo aquello que necesitarás como emprendedor, o como empresario ya consolidado, para mejorar tu conocimiento y hacer mucho más rentable tu empresa.</p>
+				<p> <strong>Escuchalo en las siguientes plataformas</strong></p>
+			</div>
+		</main>
+	</div>
+
+	<main>		
+		<center><h1 class="cabecera-titulo">Últimos <span class="text-gradient">Podcast</span></h1></center>
+		<div id="listado-podcast">
+			{
+				data.podcasts.nodes.map((item : any) => {
+					let imagen = item.featuredImage.node.mediaItemUrl;
+					return(
+						<div>
+						<img src={imagen} width="100%" height="270px" alt="Podcast"/>
+							<div class="item-podcast">
+							<h3>{item.title}</h3>
+							<hr/>
+						    <p>{removerEtiquetasHTML(item.content)}</p>
+							<a href={`podcasts/${item.id}`}><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z" /></svg> Reproducir</a>
+							</div>
+						</div>
+					)
+				})
+			}
+
+		</div>
+		
+	</main>
+</Layout>
+<style>
+	p{line-height:30px;}
+</style>

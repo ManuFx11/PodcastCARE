@@ -1,51 +1,64 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import cabeceraFondo from '../../public/PodcastsCare.webp';
-import { getPodcastWordpressGraphQL} from '../services/api-wordpress';
-const data = await getPodcastWordpressGraphQL();
-
-
-function removerEtiquetasHTML(params : string){
-	let valor = params.replace(/<[^>]*>/g,'');
-	return valor.slice(0,120);
-}
-console.log(cabeceraFondo);
+import imagen from '../../public/que-es-care.png';
+import sobreNosotros from '../../public/sobre-nosotros.webp';
+import portadaCare from '../../public/portada-care.webp';
+import { Image } from 'astro:assets';
 ---
 
 <Layout title="Podcast CARE">
-	<!-- Componente Banner -->
-	<div id="banner-podcast" style=`background-image:url(${cabeceraFondo.src});`>
-		<main>
-			<div>
-				<h1><strong>Podcast</strong> CARE</h1>
-				<p>Bienvenido/a al podcast del Club de Alto rendimiento empresarial. Un podcast en el que te contaré todo lo que a mi me hubiese gustado que me contaran cuando comencé con mi empresa.</p>
-				<p>Cada semana hablaremos sobre <strong>marketing digital, estrategias de negocio, ventas, productividad, inversiones </strong>, y todo aquello que necesitarás como emprendedor, o como empresario ya consolidado, para mejorar tu conocimiento y hacer mucho más rentable tu empresa.</p>
-				<p> <strong>Escuchalo en las siguientes plataformas</strong></p>
+  <section id="franja1">
+	<main>
+   		<div id="content-about">
+			<div style="flex-basis:48%;">
+				<h1>Un Club EXCLUSIVO de <strong>empresarios y directivos que buscan nuevas formas de vender más, sin tener que estar persiguiendo clientes.</strong></h1>
+				<p>En CARE vas a encontrar ese <strong>lugar exclusivo</strong> en el que conocer a empresarios, aprender de ellos, formarte con expertos en áreas que te ayudan a sacar más partido a tu negocio, obtener mayor visibilidad de lo que haces y establecer relaciones de calidad que hagan que las ventas de tu negocio aumenten.</p>
+				<p>Pero sobre todo estarás en un Club de PERSONAS, donde lo más importante son las relaciones personales y profesionales, por delante de las transacciones comerciales.</p>
+				<p>En un ambiente de confianza y seguridad, las ventas llegarán de manera natural. </p>
+				<p>No es un Club comercial, y el acceso es exclusivo a través de una entrevista personal con las personas que dirigen el Club.</p>
 			</div>
-		</main>
-	</div>
+			<div>
+				<Image style="width:100%;height:auto;" src={portadaCare} alt="Qué es Care"/>
+			</div>
+		   </div>
+		</main>	
+	</section>
 
-	<main>		
-		<center><h1 class="cabecera-titulo">Últimos <span class="text-gradient">Podcast</span></h1></center>
-		<div id="listado-podcast">
-			{
-				data.podcasts.nodes.map((item : any) => {
-					let imagen = item.featuredImage.node.mediaItemUrl;
-					return(
-						<div>
-						<img src={imagen} width="100%" height="270px" alt="Podcast"/>
-							<div class="item-podcast">
-							<h3>{item.title}</h3>
-							<hr/>
-						    <p>{removerEtiquetasHTML(item.content)}</p>
-							<a href={`podcasts/${item.id}`}><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z" /></svg> Reproducir</a>
-							</div>
-						</div>
-					)
-				})
-			}
 
-		</div>
-		
-	</main>
+	<section id="franja2">
+		<main>
+			   <div id="content-about">
+				<div>
+					<Image src={sobreNosotros} alt="Qué es Care"/>
+				</div>
+				<div>
+					<h1><strong>Te quiero contar por qué nace la idea del </strong> CLUB</strong></h1>
+					<p>En CARE vas a encontrar ese <strong>lugar exclusivo</strong> en el que conocer a empresarios, aprender de ellos, formarte con expertos en áreas que te ayudan a sacar más partido a tu negocio, obtener mayor visibilidad de lo que haces y establecer relaciones de calidad que hagan que las ventas de tu negocio aumenten.</p>
+					<p>Pero sobre todo estarás en un Club de PERSONAS, donde lo más importante son las relaciones personales y profesionales, por delante de las transacciones comerciales.</p>
+					<p>En un ambiente de confianza y seguridad, las ventas llegarán de manera natural. </p>
+					<p>No es un Club comercial, y el acceso es exclusivo a través de una entrevista personal con las personas que dirigen el Club.</p>
+				</div>
+			   </div>
+			</main>	
+	</section>
 </Layout>
+<style>
+	main{width:100%; max-width:1200px; margin:0px auto; display:block;}
+	section#franja1{background-color:#f7f9fc; padding:50px 0px;}
+	section#franja2{padding:50px 0px;}
+	div#content-about{display:flex; flex-direction: row; justify-content: space-between; align-items:center;}
+	div#content-about > div:first-child{padding-right:60px;}
+	div#content-about > div:last-child{max-width:520px; width:100%;}
+	div#content-about > div > h1{color:#cba036; font-size:35px;}
+	div#content-about > div > h1 > strong{color:black; }
+	div#content-about > div > p{line-height:30px; color:rgb(74, 74, 74);}
+	div#content-about > div > p > strong{font-weight:bold;}
+
+	div#content-foto{display:flex; flex-direction: row; justify-content: space-between; align-items:center;}
+	div#content-foto > div:first-child{flex-basis:45%; }
+	div#content-foto > div:last-child{flex-basis:45%;}
+	div#content-foto > div > h1{color:#cba036; font-size:35px;}
+	div#content-foto > div > h1 > strong{color:black; }
+	div#content-foto > div > p{line-height:30px; color:rgb(74, 74, 74);}
+	div#content-foto > div > p > strong{font-weight:bold;}
+</style>

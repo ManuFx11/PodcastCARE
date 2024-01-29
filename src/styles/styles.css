@@ -1,5 +1,6 @@
 	body{margin:0px; padding:0px;}
-	div#listado-podcast{display:flex; flex-direction:row; justify-content: flex-start; flex-wrap:wrap; gap:15px;}
+	div#listado-podcast, div#listado-profesionales{display:flex; flex-direction:row; justify-content: flex-start; flex-wrap:wrap; gap:15px;}
+	div#listado-profesionales{gap:40px;}
 	div#listado-podcast > div{flex-basis:24%; margin-bottom:50px;}
 	div#listado-podcast > div > div.item-podcast{-webkit-box-shadow: 10px 10px 5px -3px rgba(235,235,235,1);
 	-moz-box-shadow: 10px 10px 5px -3px rgba(235,235,235,1);
@@ -11,3 +12,37 @@
 	div#banner-podcast{background-size:cover; height:550px; background-repeat:no-repeat;}
 	div#banner-podcast > main > div{width:100%; max-width:650px; float:left; margin-top:50px;}
 	h1.cabecera-titulo{margin-bottom:45px;}
+
+	div#banner-podcast > main > div#content-care-experts{width:1200px; margin:0 auto; display:flex; flex-direction:row; justify-content: space-between;}
+    div#flex-care-experts{display:flex; flex-direction:row;justify-content: space-between; align-items:center; color:#FFF;}
+    .bottom-background{background-position:bottom;}
+    .btn-dorado{background-color:#cba036; color:#FFF; text-decoration:none; padding:10px 20px; border-radius:5px; margin-top:30px; display:block; width:fit-content; }
+	#listado-profesionales > div{text-align: center;}
+	#listado-profesionales > div > h3{margin-top:0px;}
+	#listado-profesionales{margin-bottom:40px;}
+
+	footer{background-color:#000 !important; padding:20px 0px;}
+    div#content-footer{display:flex; flex-direction:row; justify-content: space-between; align-items:center;}
+    div#content-footer > *{flex-basis:24%;}
+    div#content-footer > a{background-color:#cba036; text-align:center; text-decoration:none; color:#FFF; padding:15px 20px; border-radius:10px;}
+    #menu-footer > ul{list-style-type:none;}
+    #menu-footer > ul > li > a{color:#FFF; text-decoration:none;}
+    #redes-sociales > span{color:#FFF;}
+
+	section#franja1{background-color:#f7f9fc; padding:50px 0px;}
+	section#franja2{padding:50px 0px;}
+	div#content-about{display:flex; flex-direction: row; justify-content: space-between; align-items:center;}
+	div#content-about > div:first-child{padding-right:60px;}
+	div#content-about > div:last-child{max-width:520px; width:100%;}
+	div#content-about > div > h1{color:#cba036; font-size:35px;}
+	div#content-about > div > h1 > strong{color:black; }
+	div#content-about > div > p{line-height:30px; color:rgb(74, 74, 74);}
+	div#content-about > div > p > strong{font-weight:bold;}
+
+	div#content-foto{display:flex; flex-direction: row; justify-content: space-between; align-items:center;}
+	div#content-foto > div:first-child{flex-basis:45%; }
+	div#content-foto > div:last-child{flex-basis:45%;}
+	div#content-foto > div > h1{color:#cba036; font-size:35px;}
+	div#content-foto > div > h1 > strong{color:black; }
+	div#content-foto > div > p{line-height:30px; color:rgb(74, 74, 74);}
+	div#content-foto > div > p > strong{font-weight:bold;}

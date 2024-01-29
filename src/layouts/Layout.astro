@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/styles.css';
 import '@fontsource/poppins';
 import {ViewTransitions} from 'astro:transitions';
@@ -24,7 +25,9 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<Header/>
+		<div id="altura-menu"></div>
 			<slot/>
+		<Footer/>
 	</body>
 </html>
 <style is:global>
@@ -33,4 +36,6 @@ const { title } = Astro.props;
 		background: #fff;
 	}
 	main{width:100%; max-width:1200px; margin:0px auto; display:block;}
+	footer{background-color: color #000 !important; padding:20px 0px;}
+	#altura-menu{height:100px;}
 </style>
