@@ -1,16 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import imagen from '../../public/que-es-care.png';
 import sobreNosotros from '../../public/sobre-nosotros.webp';
 import portadaCare from '../../public/portada-care.webp';
 import { Image } from 'astro:assets';
 ---
 
 <Layout title="Inicio - CARE">
+  <!-- Section 1 -->
   <section id="franja1">
 	<main>
    		<div id="content-about">
-			<div style="flex-basis:48%;">
+			<div>
 				<h1>Un Club EXCLUSIVO de <strong>empresarios y directivos que buscan nuevas formas de vender más, sin tener que estar persiguiendo clientes.</strong></h1>
 				<p>En CARE vas a encontrar ese <strong>lugar exclusivo</strong> en el que conocer a empresarios, aprender de ellos, formarte con expertos en áreas que te ayudan a sacar más partido a tu negocio, obtener mayor visibilidad de lo que haces y establecer relaciones de calidad que hagan que las ventas de tu negocio aumenten.</p>
 				<p>Pero sobre todo estarás en un Club de PERSONAS, donde lo más importante son las relaciones personales y profesionales, por delante de las transacciones comerciales.</p>
@@ -24,30 +24,34 @@ import { Image } from 'astro:assets';
 		</main>	
 	</section>
 
-
+	<!--Section 2 -->
 	<section id="franja2">
 		<main>
 			   <div id="content-about">
-				<div>
-					<Image src={sobreNosotros} alt="Qué es Care"/>
-				</div>
-				<div>
-					<h1><strong>Te quiero contar por qué nace la idea del </strong> CLUB</strong></h1>
-					<p>En CARE vas a encontrar ese <strong>lugar exclusivo</strong> en el que conocer a empresarios, aprender de ellos, formarte con expertos en áreas que te ayudan a sacar más partido a tu negocio, obtener mayor visibilidad de lo que haces y establecer relaciones de calidad que hagan que las ventas de tu negocio aumenten.</p>
-					<p>Pero sobre todo estarás en un Club de PERSONAS, donde lo más importante son las relaciones personales y profesionales, por delante de las transacciones comerciales.</p>
-					<p>En un ambiente de confianza y seguridad, las ventas llegarán de manera natural. </p>
-					<p>No es un Club comercial, y el acceso es exclusivo a través de una entrevista personal con las personas que dirigen el Club.</p>
-				</div>
+					<div>
+						<Image src={sobreNosotros} alt="Qué es Care"/>
+					</div>
+					<div>
+						<h1><strong>Te quiero contar por qué nace la idea del </strong> CLUB</strong></h1>
+						<p>En CARE vas a encontrar ese <strong>lugar exclusivo</strong> en el que conocer a empresarios, aprender de ellos, formarte con expertos en áreas que te ayudan a sacar más partido a tu negocio, obtener mayor visibilidad de lo que haces y establecer relaciones de calidad que hagan que las ventas de tu negocio aumenten.</p>
+						<p>Pero sobre todo estarás en un Club de PERSONAS, donde lo más importante son las relaciones personales y profesionales, por delante de las transacciones comerciales.</p>
+						<p>En un ambiente de confianza y seguridad, las ventas llegarán de manera natural. </p>
+						<p>No es un Club comercial, y el acceso es exclusivo a través de una entrevista personal con las personas que dirigen el Club.</p>
+					</div>
 			   </div>
 			</main>	
 	</section>
+
+
+
+
 </Layout>
 <style>
-	main{width:100%; max-width:1200px; margin:0px auto; display:block;}
+	main{width:100%; max-width:1100px; margin:0px auto; display:block;}
 	section#franja1{background-color:#f7f9fc; padding:50px 0px;}
 	section#franja2{padding:50px 0px;}
 	div#content-about{display:flex; flex-direction: row; justify-content: space-between; align-items:center;}
-	div#content-about > div:first-child{padding-right:60px;}
+	div#content-about > div:first-child{padding-right:60px; flex-basis:48%;}
 	div#content-about > div:last-child{max-width:520px; width:100%;}
 	div#content-about > div > h1{color:#cba036; font-size:35px;}
 	div#content-about > div > h1 > strong{color:black; }

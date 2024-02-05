@@ -3,13 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import cabeceraFondo from '../../public/PodcastsCare.webp';
 import { getPodcastWordpressGraphQL} from '../services/api-wordpress';
 const data = await getPodcastWordpressGraphQL();
-
-
-function removerEtiquetasHTML(params : string){
-	let valor = params.replace(/<[^>]*>/g,'');
-	return valor.slice(0,120);
-}
-console.log(cabeceraFondo);
 ---
 
 <Layout title="Podcast CARE">
