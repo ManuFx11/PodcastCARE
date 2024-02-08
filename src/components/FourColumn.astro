@@ -1,0 +1,15 @@
+---
+
+---
+<section class="block-four-column">
+    <div class="ancho-limitado flex flex-row flex-space-between flex-align-top p-50">
+        <slot name="one-column"/>
+        <slot name="second-column"/>
+        <slot name="three-column"/>
+        <slot name="four-column"/>
+    </div>
+</section>
+<style>
+    .block-four-column{background-color: var(--black);}
+    .block-four-column > *{color: var(--white);}
+</style>

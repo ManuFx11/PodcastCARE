@@ -1,4 +1,14 @@
-	body{margin:0px; padding:0px;}
+	
+	body{margin:0px; padding:0px; font-family:'Poppins';}
+	.ancho-limitado{width:100%; max-width:1100px; margin:0px auto;}
+    strong{font-weight:600; font-family:'Poppins'; color:#5a5a5a;}
+
+
+	/* Home */
+	ul.list-check{list-style-type:disc;}
+	ul.list-check > li{margin-bottom:15px;}
+	ul.list-check > li::marker{color:#cba036;}
+	.icon-block{width:49px; height:49px;}
 	div#listado-podcast, div#listado-profesionales{display:flex; flex-direction:row; justify-content: flex-start; flex-wrap:wrap; gap:15px;}
 	div#listado-profesionales{gap:40px;}
 	div#listado-podcast > div{flex-basis:24%; margin-bottom:50px;}

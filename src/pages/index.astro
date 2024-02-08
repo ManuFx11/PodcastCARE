@@ -1,67 +1,84 @@
 ---
+//Bloques
 import Layout from '../layouts/Layout.astro';
+import SemiBlock from '../components/SemiBlock.astro';
+import FourColumn from '../components/FourColumn.astro';
+//Recursos
 import sobreNosotros from '../../public/sobre-nosotros.webp';
 import portadaCare from '../../public/portada-care.webp';
+import empresasCare from '../../public/empresas.png';
+import icono1 from '../../public/recursos/icono1.png';
+import icono2 from '../../public/recursos/icono2.png';
+import icono3 from '../../public/recursos/icono3.png';
+import icono4 from '../../public/recursos/icono4.png';
+import careReunion from '../../public/care-reunion.webp';
+
 import { Image } from 'astro:assets';
 ---
 
 <Layout title="Inicio - CARE">
-  <!-- Section 1 -->
-  <section id="franja1">
-	<main>
-   		<div id="content-about">
-			<div>
-				<h1>Un Club EXCLUSIVO de <strong>empresarios y directivos que buscan nuevas formas de vender más, sin tener que estar persiguiendo clientes.</strong></h1>
-				<ul>
-					<li>Un lugar en el que compartir experiencias y aprender de las de otros empresarios con tu misma mentalidad. gi</li>
-				</ul>
-			</div>
-			<div>
-				<Image style="width:100%;height:auto;" src={portadaCare} alt="Qué es Care"/>
-			</div>
-		   </div>
-		</main>	
-	</section>
+<!--Section 1 -->
+	<SemiBlock>
+		<div class="flex-basis-45" slot="left-block">
+			<h1 class="text-m fw-400 lh-45"><span class="color-primary fw-700 lh-45">Un club EXCLUSIVO de </span>empresarios y directivos que buscan nuevas formas de vender más, sin tener que estar persiguiendo clientes.</h1>
+			<ul class="p-left-15 list-check color-secundary text-16">
+				<li>Un lugar en el que compartir experiencias y aprender de las de otros empresarios con tu misma mentalidad. </li>
+				<li>Un espacio creado para que los empresarios que quieran puedan mostrar sus habilidades y ganar visibilidad.</li>
+				<li>Una comunidad en la que los empresarios y directivos pueden establecer relaciones personales y profesionales que les ayuden a hacer crecer sus negocios.</li>
+				<li>Formaciones de alto impacto de la mano de grandes expertos en ventas, marketing, estrategia de negocio, finanzas, productividad, etc, aplicables directamente en tu negocio.</li>
+				<li>Pero sobre todo <b>un Club de PERSONAS, donde lo más importante son las relaciones humanas y el crecimiento profesional y personal, por delante de las transacciones comerciales.</b></li>
+			</ul>
+			<p class="m-top-40 color-secundary">Empresas que ya son miembros</p>
+			<Image class="w100 h100" src={empresasCare} title="Empresas CARE" alt="Empresas CARE"/>
+			<a class="btn-primary" href="#">Únete gratis ahora</a>
+		</div>
+		<picture class="flex-basis-50" slot="right-block">
+			<Image class="w100 hauto" src={portadaCare} alt="Qué es CARE" title="Qué es CARE"/>
+		</picture>
+	</SemiBlock>
 
-	<!--Section 2 -->
-	<section id="franja2">
-		<main>
-			   <div id="content-about">
-					<div>
-						<Image src={sobreNosotros} alt="Qué es Care"/>
-					</div>
-					<div>
-						<h1><strong>Te quiero contar por qué nace la idea del </strong> CLUB</strong></h1>
-						<p>En CARE vas a encontrar ese <strong>lugar exclusivo</strong> en el que conocer a empresarios, aprender de ellos, formarte con expertos en áreas que te ayudan a sacar más partido a tu negocio, obtener mayor visibilidad de lo que haces y establecer relaciones de calidad que hagan que las ventas de tu negocio aumenten.</p>
-						<p>Pero sobre todo estarás en un Club de PERSONAS, donde lo más importante son las relaciones personales y profesionales, por delante de las transacciones comerciales.</p>
-						<p>En un ambiente de confianza y seguridad, las ventas llegarán de manera natural. </p>
-						<p>No es un Club comercial, y el acceso es exclusivo a través de una entrevista personal con las personas que dirigen el Club.</p>
-					</div>
-			   </div>
-			</main>	
-	</section>
+<!--Section 2 -->
+	<FourColumn>
+		<div class="flex-basis-25" slot="one-column">
+			<Image class="icon-block" src={icono1} title="Aprende - CARE" alt="Aprende - CARE"/>
+			<h2 class="m-bottom-0 fw-500">Aprende</h2>
+			<p class="text-15 lh-30 fw-300">Ahórrate tiempo y dinero gracias a las formaciones semanales de la mano de grandes expertos que irán directos al grano. 100% aplicables en tu negocio.</p>
+		</div>
+		<div class="flex-basis-25" slot="second-column">
+			<Image class="icon-block" src={icono2} title="Conecta - CARE" alt="Conecta - CARE"/>
+			<h2 class="m-bottom-0 fw-500">Conecta</h2>
+			<p class="text-15 lh-30 fw-300">Un espacio de networking en el que establecer relaciones estratégicas para hacer crecer tu negocio.</p>
+		</div>
+		<div class="flex-basis-25" slot="three-column">
+			<Image class="icon-block" src={icono3} title="Visibilidad - CARE" alt="Visibilidad - CARE"/>
+			<h2 class="m-bottom-0 fw-500">Visibilidad</h2>
+			<p class="text-15 lh-30 fw-300">Muestra tus mejores habilidades para que otros empresarios las conozcan y comprendan que es posible que les puedas ayudar a mejorar sus negocios.</p>
+		</div>
+		<div class="flex-basis-25" slot="four-column">
+			<Image class="icon-block" src={icono4} title="Experiencia - CARE" alt="Experiencia - CARE"/>
+			<h2 class="m-bottom-0 fw-500">Experiencia</h2>
+			<p class="text-15 lh-30 fw-300">Acceso a una comunidad en la que compartir problemas y soluciones con otros empresarios.</p>
+		</div>
+	</FourColumn>
 
-
-
+<!-- Section 3 -->
+	<SemiBlock>
+		<div class="flex-basis-45" slot="right-block">
+			<h1 class="text-m fw-400 lh-45"><span class="color-primary fw-700 lh-45">Un club EXCLUSIVO de </span>empresarios y directivos que buscan nuevas formas de vender más, sin tener que estar persiguiendo clientes.</h1>
+			<ul class="p-left-15 list-check color-secundary text-16">
+				<li>Un lugar en el que compartir experiencias y aprender de las de otros empresarios con tu misma mentalidad. </li>
+				<li>Un espacio creado para que los empresarios que quieran puedan mostrar sus habilidades y ganar visibilidad.</li>
+				<li>Una comunidad en la que los empresarios y directivos pueden establecer relaciones personales y profesionales que les ayuden a hacer crecer sus negocios.</li>
+				<li>Formaciones de alto impacto de la mano de grandes expertos en ventas, marketing, estrategia de negocio, finanzas, productividad, etc, aplicables directamente en tu negocio.</li>
+				<li>Pero sobre todo <b>un Club de PERSONAS, donde lo más importante son las relaciones humanas y el crecimiento profesional y personal, por delante de las transacciones comerciales.</b></li>
+			</ul>
+			<p class="m-top-40 color-secundary">Empresas que ya son miembros</p>
+			<Image class="w100 h100" src={empresasCare} title="Empresas CARE" alt="Empresas CARE"/>
+			<a class="btn-primary" href="#">Únete gratis ahora</a>
+		</div>
+		<picture class="flex-basis-50" slot="left-block">
+			<Image class="w100 hauto" src={careReunion} alt="Qué es CARE" title="Qué es CARE"/>
+		</picture>
+	</SemiBlock>
 
 </Layout>
-<style>
-	main{width:100%; max-width:1100px; margin:0px auto; display:block;}
-	section#franja1{background-color:#f7f9fc; padding:50px 0px;}
-	section#franja2{padding:50px 0px;}
-	div#content-about{display:flex; flex-direction: row; justify-content: space-between; align-items:center;}
-	div#content-about > div:first-child{padding-right:60px; flex-basis:48%;}
-	div#content-about > div:last-child{max-width:520px; width:100%;}
-	div#content-about > div > h1{color:#cba036; font-size:35px;}
-	div#content-about > div > h1 > strong{color:black; }
-	div#content-about > div > p{line-height:30px; color:rgb(74, 74, 74);}
-	div#content-about > div > p > strong{font-weight:bold;}
-
-	div#content-foto{display:flex; flex-direction: row; justify-content: space-between; align-items:center;}
-	div#content-foto > div:first-child{flex-basis:45%; }
-	div#content-foto > div:last-child{flex-basis:45%;}
-	div#content-foto > div > h1{color:#cba036; font-size:35px;}
-	div#content-foto > div > h1 > strong{color:black; }
-	div#content-foto > div > p{line-height:30px; color:rgb(74, 74, 74);}
-	div#content-foto > div > p > strong{font-weight:bold;}
-</style>
