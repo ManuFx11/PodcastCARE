@@ -1,12 +1,10 @@
 ---
-//Componente SEMIBLOCK
+//Componente SEMIBLOCK 
+const {backgroundColor, alignItems} = Astro.props;
 ---
-<section class="block-semiblock">
-    <div class="ancho-limitado flex flex-row flex-space-between flex-align-center p-50">
+<section style=`background-color:${backgroundColor};` class="block-semiblock">
+    <div style=`align-items:${alignItems};` class="ancho-limitado flex flex-row flex-space-between p-50">
         <slot name="left-block"/>
         <slot name="right-block"/>
     </div>
 </section>
-<style>
-    .block-semiblock{background-color:#f7f9fc;}
-</style>

@@ -4,21 +4,41 @@
     --color-secundary: #5a5a5a;
     --white: #FFF;
     --black: #000;
+    --ancho-contenido: 1200px;
+    --ancho-contenido-plus: 1000px;
 }
 
 /*Colores Predefinidos */
 .color-primary{color: var(--color-primary);}
 .color-secundary{color: var(--color-secundary);}
+b{font-weight:600;}
 
-/* Botones Predefenidos*/
+/* Botones Predefenidos del Proyecto */
 .btn-primary{background-color: var(--color-primary); width:100%; text-align:center; text-decoration:none; color: var(--white); display:block; padding:15px 40px; margin:15px auto; transition:all 0.4s ease-in;}
 .btn-primary:hover{background-color: var(--color-secundary);}
+
+.unete-ahora{border:none; background-color:#cba036; transition:all 0.4s ease-in;padding: 15px 40px; color: #FFF;text-decoration: none;font-size: 17px;letter-spacing: 0.07px;border-radius: 4px; transition:all 0.4s ease-in;}
+.unete-ahora > svg{margin-right:5px;}
+.unete-ahora:hover{background-color: var(--black); color: var(--white);}
+
+.unete-ahora-reverse{border:1px solid var(--color-secundary); background-color: var(--white); transition:all 0.4s ease-in;padding: 15px 40px; color: var(--black);text-decoration: none;font-size: 17px;letter-spacing: 0.07px;border-radius: 4px; transition:all 0.4s ease-in;}
+.unete-ahora-reverse > svg{margin-right:5px;}
+.unete-ahora-reverse:hover{background-color: var(--color-secundary); color: var(--white);}
+
+
 
 /*Globales*/
 .w100{width:100%;}
 .h100{height:100%;}
 .block{display:block;}
 .hauto{height:auto;}
+.text-center{text-align:center;}
+.sombra{-webkit-box-shadow: 0px 0px 18px 0px rgba(179,179,179,1);
+    -moz-box-shadow: 0px 0px 18px 0px rgba(179,179,179,1);
+    box-shadow: 0px 0px 18px 0px rgba(179,179,179,1);}
+
+/*Clases Utilidades */
+.ancho-limitado{width:100%; max-width: var(--ancho-contenido); margin:0px auto;}
 
 
 /* Titulos Tamaños */
@@ -51,9 +71,13 @@
 
 /*Line Height*/
 .lh-30{line-height:30px;}
+.lh-35{line-height:35px;}
 .lh-40{line-height:40px;}
 .lh-45{line-height:45px;}
 .lh-50{line-height:50px;}
+
+/* Block */
+.block{display:block;}
 
 /* Flex */
 .flex{display:flex;}
@@ -64,6 +88,7 @@
 .flex-align-bottom{align-items: flex-end;}
 
 .flex-space-between{justify-content: space-between;}
+.flex-center{justify-content: center;}
 
 .flex-basis-20{flex-basis:20%;}
 .flex-basis-25{flex-basis:23%;}
@@ -141,6 +166,7 @@
 .p-top-20{padding-top:20px;}
 .p-top-25{padding-top:25px;}
 .p-top-30{padding-top:30px;}
+.p-top-45{padding-top:45px;}
 
 .p-bottom-5{padding-bottom:5px;}
 .p-bottom-10{padding-bottom:10px;}

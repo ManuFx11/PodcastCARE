@@ -1,0 +1,6 @@
+---
+const {id, backgroundColor} = Astro.props;
+---
+<section id={id} class="ancho-limitado" style=`background-color:${backgroundColor};`>
+    <slot name="contenido"></slot>
+</section>

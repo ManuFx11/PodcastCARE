@@ -3,6 +3,11 @@
 import Layout from '../layouts/Layout.astro';
 import SemiBlock from '../components/SemiBlock.astro';
 import FourColumn from '../components/FourColumn.astro';
+import Button from '../components/recursos/Button.astro';
+import AnchoLimitado from '../components/recursos/AnchoLimitado.astro';
+import PlanGratis from '../components/especificos/PlanGratis.astro';
+import PlanPago from '../components/especificos/PlanPago.astro'
+
 //Recursos
 import sobreNosotros from '../../public/sobre-nosotros.webp';
 import portadaCare from '../../public/portada-care.webp';
@@ -12,6 +17,10 @@ import icono2 from '../../public/recursos/icono2.png';
 import icono3 from '../../public/recursos/icono3.png';
 import icono4 from '../../public/recursos/icono4.png';
 import careReunion from '../../public/care-reunion.webp';
+import accesoOnline from '../../public/recursos/acceso-online.webp';
+import masterClass from '../../public/recursos/masterclass.webp';
+import networking from '../../public/recursos/networking-care.webp';
+import careAcceso from '../../public/recursos/care-acceso.webp';
 
 import { Image } from 'astro:assets';
 ---
@@ -29,7 +38,7 @@ import { Image } from 'astro:assets';
 				<li>Pero sobre todo <b>un Club de PERSONAS, donde lo más importante son las relaciones humanas y el crecimiento profesional y personal, por delante de las transacciones comerciales.</b></li>
 			</ul>
 			<p class="m-top-40 color-secundary">Empresas que ya son miembros</p>
-			<Image class="w100 h100" src={empresasCare} title="Empresas CARE" alt="Empresas CARE"/>
+			<Image class="w100" style="height:80px;" src={empresasCare} title="Empresas CARE" alt="Empresas CARE"/>
 			<a class="btn-primary" href="#">Únete gratis ahora</a>
 		</div>
 		<picture class="flex-basis-50" slot="right-block">
@@ -62,23 +71,106 @@ import { Image } from 'astro:assets';
 	</FourColumn>
 
 <!-- Section 3 -->
-	<SemiBlock>
+	<SemiBlock backgroundColor="#FFF" alignItems="flex-start">
 		<div class="flex-basis-45" slot="right-block">
-			<h1 class="text-m fw-400 lh-45"><span class="color-primary fw-700 lh-45">Un club EXCLUSIVO de </span>empresarios y directivos que buscan nuevas formas de vender más, sin tener que estar persiguiendo clientes.</h1>
-			<ul class="p-left-15 list-check color-secundary text-16">
-				<li>Un lugar en el que compartir experiencias y aprender de las de otros empresarios con tu misma mentalidad. </li>
-				<li>Un espacio creado para que los empresarios que quieran puedan mostrar sus habilidades y ganar visibilidad.</li>
-				<li>Una comunidad en la que los empresarios y directivos pueden establecer relaciones personales y profesionales que les ayuden a hacer crecer sus negocios.</li>
-				<li>Formaciones de alto impacto de la mano de grandes expertos en ventas, marketing, estrategia de negocio, finanzas, productividad, etc, aplicables directamente en tu negocio.</li>
-				<li>Pero sobre todo <b>un Club de PERSONAS, donde lo más importante son las relaciones humanas y el crecimiento profesional y personal, por delante de las transacciones comerciales.</b></li>
+			<h4 class="text-s fw-300 lh-40"><b>Esto es lo que vas a conseguir</b> si te unes ahora al Club <b>de Alto Rendimiento Empresarial</b></h4>
+			<ul class="listado-block2 p-left-15 list-check color-secundary text-16 m-bottom-45">
+				<li><b>Una comunidad privada, online y presencial</b>, en la que mejorar tu relación con otros empresarios y directivos como si estuvieras en el círculo de empresarios de Wall Street. </li>
+				<li><b>Un calendario de eventos online y presenciales</b> donde realizarás networking y aumentarás tu red de contactos. El espacio en el que lograr alianzas con otros empresarios que refuercen tu negocio.</li>
+				<li>El lugar en el que <b>vas a poder encontrar empresarios como tú</b> para aprender de ellos y de sus experiencias.</li>
+				<li><b>Ganar visibilidad </b>mostrando lo que haces te da la oportunidad de mejorar las ventas de tu negocio.</li>
+				<li>Una forma de <b>conectar con otros empresarios y directivos de otros lugares de España</b> sin necesidad de desplazarte.</li>
+				<li><b>Cursos de grandes profesionales</b> como Pepe Cabello, Tristán Elóstegui, Borja Bedoya, Pablo García, Juan Medina o Javier López con los que aprender estrategias para aplicarlas en tu negocio.</li>
+				<li><b>Formación de alto impacto</b> de la mano de grandes expertos en ventas, marketing, estrategia de negocio, finanzas, productividad, etc, <b>aplicables directamente en tu negocio</b></li>
 			</ul>
-			<p class="m-top-40 color-secundary">Empresas que ya son miembros</p>
-			<Image class="w100 h100" src={empresasCare} title="Empresas CARE" alt="Empresas CARE"/>
-			<a class="btn-primary" href="#">Únete gratis ahora</a>
+			<Button/>
 		</div>
-		<picture class="flex-basis-50" slot="left-block">
-			<Image class="w100 hauto" src={careReunion} alt="Qué es CARE" title="Qué es CARE"/>
+		<picture class="flex-basis-50 p-top-45" slot="left-block">
+			<Image class="w100 hauto sombra" src={careReunion} alt="Qué es CARE" title="Qué es CARE"/>
 		</picture>
 	</SemiBlock>
+
+<!-- Section 4 -->
+
+	<SemiBlock backgroundColor="#cba03640" alignItems="flex-center">
+		<div class="flex-basis-50" slot="left-block">
+			<h4 class="text-s fw-300 lh-40">Acceso online desde <b>donde quieras</b>, cuando mejor te venga</h4>
+			<p class="lh-35 text-16">Nuestro Club combina actividades formativas, acceso a masterclass en las que otros empresarios te contarán su experiencia, sesiones de networking online y presenciales, y muchas cosas más. La ventaja de ser un Club online y presencial es que <b>podrás acceder a todos estos recursos desde el lugar que quieras y en el momento que quieras.</b></p>
+		</div>
+		<picture class="flex-basis-45 p-top-45" slot="right-block">
+			<Image class="w100 hauto" src={accesoOnline} alt="Accede a CARE" title="Accede a CARE"/>
+		</picture>
+	</SemiBlock>
+
+<!-- Section 5 -->
+
+	<SemiBlock backgroundColor="#fff" alignItems="flex-center">
+			<div class="flex-basis-50" slot="right-block">
+				<h4 class="text-s fw-300 lh-40">Un círculo de empresarios para hacer <b>networking</b> y crecer</h4>
+				<p class="lh-35 text-16">Un espacio basado en cuatro pilares para hacer crecer tu negocio: <b>formación, visibilidad, autoridad y confianza.</b></p>
+			    <p class="lh-35 text-16"><b>NO es un Club comercial</b>, es un club donde generar relaciones personales y profesionales, que harán que el negocio se genere de manera natural.</p>
+				<p class="lh-35 text-16">Pero lo más importante: <b>Un club de personas, donde crear contacto de calidad y exclusivos.</b></p>
+			</div>
+			<picture class="flex-basis-45 p-top-45" slot="left-block">
+				<Image class="w100 hauto" src={masterClass} alt="Accede a CARE" title="Accede a CARE"/>
+			</picture>
+	</SemiBlock>
+
+<!-- Section 6 -->
+
+	<SemiBlock backgroundColor="#cba03640" alignItems="center">
+		<div class="flex-basis-50" slot="left-block">
+			<h4 class="text-s fw-300 lh-40"><b>Formación semanal de alto impacto para llevar a tu empresa al siguiente nivel</b></h4>
+			<p class="lh-35 text-16">
+				Como Socio Premium tendrás acceso a una <b>formación de un año completo</b> (mientras dure tu suscripción), comparable a los máster y formaciones más prestigiosas, a través de la cual aprenderás todo lo necesario para llevar a tu negocio al siguiente nivel. 
+			</p>
+			<p class="lh-35 text-16">Una <b>formación en la que no perderás el tiempo, al grano, y totalmente accionable.</b> Semana a semana irás viendo cómo tu empresa se ira transformando.</p>
+			<p class="lh-35 text-16">Solo esta formación de un año <b>está valorada en más de 8.000€.</b></p>
+			<p class="lh-35 text-16">Al final recibirás un certificado de la Escuela de Alto Rendimiento Empresarial.</p>
+			<p class="lh-35 text-16">Además tendrás acceso a más formaciones y cursos que iremos añadiendo poco a poco</p>
+		</div>
+		<picture class="flex-basis-50 p-top-45" slot="right-block">
+			<Image class="w100 hauto" src={networking} alt="Accede a CARE" title="Accede a CARE"/>
+		</picture>
+	</SemiBlock>
+
+<!-- Semiblock 7 -->
+
+	<SemiBlock backgroundColor="#fff" alignItems="flex-center">
+		<div class="flex-basis-50" slot="right-block">
+			<h4 class="text-s fw-300 lh-40"><b>Combinamos lo mejor del mundo online y offline</b></h4>
+			<p class="lh-35 text-16">A pesar de ser un club online también se celebran <b> eventos presenciales</b> en los que podrás afianzar todas las relaciones que hayas establecido en la comunidad online</p>
+			<p class="lh-35 text-16">Se crearán grupos locales a medida que el Club vaya creciendo y podrás establecer relaciones en tu zona de influencia.</p>
+			
+		</div>
+		<picture class="flex-basis-45 p-top-45" slot="left-block">
+			<Image class="w100 hauto" src={careAcceso} alt="Accede a CARE" title="Accede a CARE"/>
+		</picture>
+	</SemiBlock>
+
+<!-- Bloque 8 -->
+
+	 <AnchoLimitado id="unete-care-block" backgroundColor="#FFF">
+		<div slot="contenido" style="margin-bottom:80px;">
+			<h4 class="text-center text-l fw-500">Únete ahora al Club de Alto Rendimiento Empresarial</h4>
+			<div style="column-gap:30px;" class="ancho-limitado-plus flex flex-center">
+				<PlanGratis/>
+				<PlanPago/>
+			</div>
+		</div>
+	 </AnchoLimitado>
+
+<!-- Bloque 11 -->
+
+	<SemiBlock backgroundColor="#cba03640" alignItems="center">
+		<div class="flex-basis-50" slot="left-block">
+			<h4 class="text-s fw-300 lh-40"><b>Lleva a tu empresa a otro nivel</b></h4>
+			<p class="lh-35 text-16">Hazte miembro AHORA del Club de Alto Rendimiento Empresarial, y mejora los resultados de tu empresa. Aprende, conecta, consigue más visibilidad y aprende de la experiencia de otras empresarios y empresarias que te ayudarán a avanzar mucho más rápido en tu negocio.</p>
+		</div>
+		<div class="flex-basis-40" slot="right-block">
+			<a class="unete-ahora-reverse btn-especial" href="#">¡Quiere unirme a CARE!</a>
+		</div>
+	</SemiBlock>
+
 
 </Layout>
