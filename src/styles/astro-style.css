@@ -11,6 +11,7 @@
 /*Colores Predefinidos */
 .color-primary{color: var(--color-primary);}
 .color-secundary{color: var(--color-secundary);}
+.text-white{color:#FFF;}
 b{font-weight:600;}
 
 /* Botones Predefenidos del Proyecto */
@@ -39,6 +40,7 @@ b{font-weight:600;}
 
 /*Clases Utilidades */
 .ancho-limitado{width:100%; max-width: var(--ancho-contenido); margin:0px auto;}
+.border-radius{border-radius:15px;}
 
 
 /* Titulos Tamaños */
@@ -86,6 +88,10 @@ b{font-weight:600;}
 .flex-align-center{align-items: center;}
 .flex-align-top{align-items: flex-start;}
 .flex-align-bottom{align-items: flex-end;}
+.gap-10{gap:10px;}
+.gap-20{gap:20px;}
+.gap-30{gap:30px;}
+.gap-40{gap:40px;}
 
 .flex-space-between{justify-content: space-between;}
 .flex-center{justify-content: center;}
