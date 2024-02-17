@@ -1,69 +1,103 @@
 ---
+/* Bloques */
 import Layout from '../layouts/Layout.astro';
+import SemiBlock from '../components/SemiBlock.astro';
+import FourColumn from '../components/FourColumn.astro';
+
+/* Recursos */
 import imagen from '../../public/que-es-care.png';
 import sobreNosotros from '../../public/sobre-nosotros.webp';
 import fotoFran from '../../public/fran.webp';
+import formacionCare from '../../public/recursos/FormacionCARE.webp';
+import careTablet from '../../public/recursos/careTablet.webp';
 import { Image } from 'astro:assets';
 ---
 
-<Layout title="Podcast CARE">
-  <section id="franja1">
-	<main>
-   		<div id="content-about">
-			<div>
-				<h1>Qué es <strong>CARE</strong></h1>
-				<p>En CARE vas a encontrar ese <strong>lugar exclusivo</strong> en el que conocer a empresarios, aprender de ellos, formarte con expertos en áreas que te ayudan a sacar más partido a tu negocio, obtener mayor visibilidad de lo que haces y establecer relaciones de calidad que hagan que las ventas de tu negocio aumenten.</p>
-				<p>Pero sobre todo estarás en un Club de PERSONAS, donde lo más importante son las relaciones personales y profesionales, por delante de las transacciones comerciales.</p>
-				<p>En un ambiente de confianza y seguridad, las ventas llegarán de manera natural. </p>
-				<p>No es un Club comercial, y el acceso es exclusivo a través de una entrevista personal con las personas que dirigen el Club.</p>
-			</div>
-			<div>
-				<Image src={imagen} alt="Qué es Care"/>
-			</div>
-		   </div>
-		</main>	
-	</section>
+<Layout title="Sobre Nosotros - CARE">
+  
+	<!--Section 1 -->
+	<SemiBlock backgroundColor="#f7f9fc" alignItems="center">
+		<div class="flex-basis-45" slot="left-block">
+			<h1 class="text-m fw-400 lh-45"><span class="color-primary fw-700 lh-45">Qué es </span><strong>CARE</strong></h1>
+			<p class="lh-35 color-secundary text-16">En CARE vas a encontrar ese <strong>lugar exclusivo</strong> en el que conocer a empresarios, aprender de ellos, formarte con expertos en áreas que te ayudan a sacar más partido a tu negocio, obtener mayor visibilidad de lo que haces y establecer relaciones de calidad que hagan que las ventas de tu negocio aumenten.</p>
+			<p class="lh-35 color-secundary text-16">Pero sobre todo estarás en un <strong>Club de PERSONAS, donde lo más importante son las relaciones personales y profesionales, por delante de las transacciones comerciales.</strong></p>
+			<p class="lh-35 color-secundary text-16">En un ambiente de confianza y seguridad, <strong>las ventas llegarán de manera natural.</strong></p>
+			<p class="lh-35 color-secundary text-16"><strong>No es un Club comercial</strong>, y el acceso es exclusivo a través de una entrevista personal con las personas que dirigen el Club.</p>
+		</div>
+		<picture class="flex-basis-50" slot="right-block">
+			<Image class="w100 hauto" src={imagen} alt="Qué es CARE" title="Qué es CARE"/>
+		</picture>
+	</SemiBlock>
 
+<!-- Section 2 -->
+	<SemiBlock backgroundColor="#fff" alignItems="center">
+		<div class="flex-basis-40" slot="left-block">
+			<picture>
+				<Image src={sobreNosotros} alt="Qué es Care"/>
+			</picture>
+		</div>
+		<div class="flex-basis-55" slot="right-block">
+			<h2 class="fw-500 text-s">Te quiero contar <span style="color:#cba036;" class="fw-800">por qué</span> nace la idea del CLUB </h2>
+			<p class="lh-35 color-secundary text-16">Es posible que el hecho de tener tu empresa no haya sido un camino fácil. A mí me ha pasado que he tenido que ir resolviendo muchos problemas a lo largo de mi trayectoria profesional ¿y a ti?</p>
+			<p class="lh-35 color-secundary text-16">Tal vez te hayas encontrado con algunas situaciones en las que no sabías qué hacer, problemas que no sabías resolver, y has tenido que improvisar. Te aseguro que yo he pasado por eso.</p>
+			<p class="lh-35 color-secundary text-16">Mi andadura empresarial comenzó en 2008 cuando mi jefe por aquel entonces me ofreció quedarme con la empresa donde trabajaba y con 2 trabajadores. </p>
+			<p class="lh-35 color-secundary text-16">Si echamos la vista atrás en 2008 fue la última crisis gorda que hemos vivido (al menos hasta el momento). No era una buena época para emprender pero…</p>
+			<p class="lh-35 color-secundary text-16">Me lancé a la piscina y le dije que sí. </p>
+		</div>
+	</SemiBlock>
 
-	<section id="franja2">
-		<main>
-			   <div id="content-about">
-				<div>
-					<Image src={sobreNosotros} alt="Qué es Care"/>
-				</div>
-				<div>
-					<h1><strong>Te quiero contar por qué nace la idea del </strong> CLUB</strong></h1>
-					<p>En CARE vas a encontrar ese <strong>lugar exclusivo</strong> en el que conocer a empresarios, aprender de ellos, formarte con expertos en áreas que te ayudan a sacar más partido a tu negocio, obtener mayor visibilidad de lo que haces y establecer relaciones de calidad que hagan que las ventas de tu negocio aumenten.</p>
-					<p>Pero sobre todo estarás en un Club de PERSONAS, donde lo más importante son las relaciones personales y profesionales, por delante de las transacciones comerciales.</p>
-					<p>En un ambiente de confianza y seguridad, las ventas llegarán de manera natural. </p>
-					<p>No es un Club comercial, y el acceso es exclusivo a través de una entrevista personal con las personas que dirigen el Club.</p>
-				</div>
-			   </div>
-			</main>	
-	</section>
+<!-- Section 3 -->
+	<SemiBlock backgroundColor="#f7f9fc" alignItems="center">
+		<div class="flex-basis-50" slot="right-block">
+			<picture>
+				<Image class="imagen-fran" src={fotoFran} alt="Qué es Care - Francisco Rubio" title="Qué es CARE - Francisco Rubio"/>
+			</picture>
+		</div>
+		<div class="flex-basis-45" slot="left-block">
+			<h2 class="fw-500 text-s">Qué es el <span style="color:#cba036;" class="fw-800">networking</span> y cómo puedo ayudarte </h2>
+			<p class="lh-35 color-secundary text-16">Empecé con la oficina en mi casa. No pude hacerlo en un garaje como las grandes empresas de Sillicon Valley, pero no importaba. Lo que realmente importaba era las ganas. </p>
+			<p class="lh-35 color-secundary text-16">Y desde entonces como te decía más arriba ha sido un camino muy largo. Con grandes aciertos y con grandes errores. La clave está en aprender de lo que te sale bien (para repetirlo) y de lo que no te sale tan bien (para ver por qué no te ha funcionado e intentar no cometerlo más veces). </p>
+			<p class="lh-35 color-secundary text-16">Hace un par de años decidí interesarme por los grupos de Networking. Que más o menos vienen a ser un lugar en el que conoces a otros profesionales y en donde puedes hacer negocio. </p>
+			<p class="lh-35 color-secundary text-16">Es como un grupo de colegas pero todos vestidos con traje y corbata. Imagina que tienes un amigo que es pintor, y que te ha demostrado con el tiempo que quita el gotelé como si fuera Miguel Ángel. Y ahora imagina que alguien te habla que quiere pintar su casa y tú le recomiendas a tu amigo pintor. </p>
+			<p class="lh-35 color-secundary text-16">Eso es lo que sucede en los clubs de Networking explicado de una forma muy simple. </p>
+		</div>
+	</SemiBlock>
 
+<!-- Section 4 -->
 
-	<section id="franja1">
-		<main>
-			   <div id="content-foto">
-				<div>
-					<h1><strong>Qué es el networking y </strong>cómo puedo ayudarte</h1>
-					<p>Empecé con la oficina en mi casa. No pude hacerlo en un garaje como las grandes empresas de Sillicon Valley, pero no importaba. Lo que realmente importaba era las ganas. </p>
-					<p>Y desde entonces como te decía más arriba ha sido un camino muy largo. Con grandes aciertos y con grandes errores. La clave está en aprender de lo que te sale bien (para repetirlo) y de lo que no te sale tan bien (para ver por qué no te ha funcionado e intentar no cometerlo más veces). </p>
-					<p>Hace un par de años decidí interesarme por los grupos de Networking. Que más o menos vienen a ser un lugar en el que conoces a otros profesionales y en donde puedes hacer negocio. </p>
-					<p>Es como un grupo de colegas pero todos vestidos con traje y corbata. Imagina que tienes un amigo que es pintor, y que te ha demostrado con el tiempo que quita el gotelé como si fuera Miguel Ángel. Y ahora imagina que alguien te habla que quiere pintar su casa y tú le recomiendas a tu amigo pintor. </p>
-					<p>Eso es lo que sucede en los clubs de Networking explicado de una forma muy simple. </p>
-				</div>
-				<div>
-					<Image style="width:100%;height:770px;" src={fotoFran} alt="Qué es Care"/>
-				</div>
-				
-			   </div>
-			</main>	
-		</section>
+<SemiBlock backgroundColor="#fff" alignItems="center">
+	<div class="flex-basis-45" slot="left-block">
+		<picture>
+			<Image class="w100 h100" src={formacionCare} alt="Qué es Care"/>
+		</picture>
+	</div>
+	<div class="flex-basis-50" slot="right-block">
+		<h2 class="fw-500 text-s"><span style="color:#cba036;" class="fw-800">CARE</span> es ese lugar en el que un empresario puede ganar visibilidad y generar confianza en otros empresarios. </h2>
+		<p class="lh-35 color-secundary text-16">Si tú eres bueno en algo, y lo demuestras, generas seguridad. Esa seguridad puede que haga que otros que te conocen confíen en ti para que les puedas ayudar en su negocio.</p>
+		<p class="lh-35 color-secundary text-16">En la mayoría de clubes en los que estoy es posible encontrar visibilidad, confianza y seguridad. Pero en todos ellos hay algo que no he encontrado.</p>
+		<p class="lh-35 color-secundary text-16">Algo que como empresario me hubiera gustado tener cuando empecé (por suerte ahora sí que lo tengo). ¿El qué? Muy simple tener a alguien al que preguntar, alguien del que aprender para mejorar mi negocio.</p>
+		<p class="lh-35 color-secundary text-16">La formación es clave para tener éxito en los negocios. Y esto es lo que existe en CARE.</p>
+		<p class="lh-35 color-secundary text-16"><strong>Una formación de alto impacto, accionable, y al grano, con la que llevarás a tu empresa a otro nivel.</strong></p>
+		<p class="lh-35 color-secundary text-16"><strong>Una formación en estrategia de negocio, que es lo primero que tenemos que aprender antes de afrontar otros retos como empresarios. </strong></p>
+	</div>
+</SemiBlock>
 
+<!-- Section 5 -->
+
+<SemiBlock backgroundColor="#cba0364d" alignItems="center">
+	<div class="flex-basis-45" slot="right-block">
+		<picture>
+			<Image class="w100 h100" src={careTablet} alt="Qué es Care"/>
+		</picture>
+	</div>
+	<div class="flex-basis-50" slot="left-block">
+		<h2 class="fw-500 text-s">Es por ello que me gustaría aportar mi granito de arena y poder <span class="fw-800">ayudarte</span> </h2>
+		<p class="lh-35 color-secundary text-16">Pensando en todo esto, y en cómo encontrar una solución a diferentes problemas, y poder ayudar a otros empresarios y empresarias como tú, he creado el Club de Alto Rendimiento Empresarial.</p>
+		<p class="lh-35 color-secundary text-16">Un Club híbrido (online y presencial) en el que encontrarás todo aquello que a mi me hubiese gustado que me contaran cuando inicié mi empresa, allá por 2008, y nadie me contó</p>
+		<p class="lh-35 color-secundary text-16">Un Club formado por muchos profesionales empresarios y empresarias que aportarán sus conocimientos para hacerte un poco más fácil tu día a día. Ya no sufrirás más la soledad del empresario. ¿Sabes de qué hablo verdad?</p>
+		<p class="lh-35 color-secundary text-16">Además tendrás un espacio para formarte. No serán formaciones densas o pesadas con un montón de paja. Como empresario es posible que no tengas demasiado tiempo y huyas de formaciones interminables que nunca acabas (o que ni siquiera empiezas). </p>
+		
+	</div>
+</SemiBlock>
 
 </Layout>
-<style>
-	main{width:100%; max-width:1200px; margin:0px auto; display:block;}
-</style>

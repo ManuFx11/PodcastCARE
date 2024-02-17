@@ -6,21 +6,24 @@ import logotipo from '../../public/logotipo-care.png';
 <header>
     <div class="content-header">
         <Image src={logotipo} title="Podcast CARE" alt="Podcast CARE"/>
-        <nav>
-            <a href="/">Inicio</a>
-            <a href="/nosotros">Sobre el Club</a>
-            <a href="/podcast">Podcast</a>
-            <a href="/care-experts">Care Experts</a>
-            <a href="/">Actualidad</a>
-            <a href="/">Eventos</a>
-            <a href="/">Contacto</a>
+        <nav id="menu-superior-care">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/nosotros">Sobre el Club</a>
+                    <ul class="submenu">
+                        <li><a href="nosotros">Qué es el Club</a></li>
+                        <li><a href="/">Nuestra Visión</a></li>
+                        <li><a href="/">Qué queremos conseguir</a></li>
+                        <li><a href="/">Nuestros valores</a></li>
+                    </ul>
+                </li>
+                <li><a href="/podcast">Podcast</a></li>
+                <li><a href="/care-experts">Care Experts</a></li>
+                <li><a href="/">Actualidad</a></li>
+                <li><a href="/">Eventos</a></li>
+                <li><a href="/">Contacto</a></li>
+            </ul>
         </nav>
         <button class="unete-ahora">Únete ahora</button>
     </div>
 </header>
-<style>
-    header{box-shadow:0px 4px 10px #b4b5b94d; padding-bottom:5px; position:fixed; background-color:#FFF; width:100%; z-index:9999;}
-    div.content-header{max-width:1200px; width:100%; margin:20px auto; padding-top:20px; align-items:center;display:flex; flex-direction:row; justify-content: space-between;}
-    div.content-header > nav > a{margin:0px 10px; text-decoration:none; font-size:15px; color:black;}
-    div.content-header > button{border:none; background-color:#cba036; transition:all 0.4s ease-in;padding: 15px 40px; color: #FFF;text-decoration: none;font-size: 15px;letter-spacing: 0.07px;border-radius: 4px;}
-</style>

@@ -6,6 +6,7 @@
     --black: #000;
     --ancho-contenido: 1200px;
     --ancho-contenido-plus: 1000px;
+    --fondo-seccion: #f7f9fc;
 }
 
 /*Colores Predefinidos */
@@ -25,6 +26,13 @@ b{font-weight:600;}
 .unete-ahora-reverse{border:1px solid var(--color-secundary); background-color: var(--white); transition:all 0.4s ease-in;padding: 15px 40px; color: var(--black);text-decoration: none;font-size: 17px;letter-spacing: 0.07px;border-radius: 4px; transition:all 0.4s ease-in;}
 .unete-ahora-reverse > svg{margin-right:5px;}
 .unete-ahora-reverse:hover{background-color: var(--color-secundary); color: var(--white);}
+
+/* Menu Estilos */
+ul.submenu{display:none; position:absolute; top:100%; left:0; background-color:var(--color-primary); transition:all 0.4s ease-in; list-style-type:revert; padding:10px 10px 10px 30px; box-sizing: border-box; width:240px;}
+ul.submenu > li{font-size:14px; line-height:33px; transition:all 0.4s ease-in;}
+ul.submenu > li::marker{background-color:var(--color-secundary);}
+ul.submenu > li:hover > a{border-bottom:1px dotted #FFF;}
+ul.submenu > li > a{text-decoration:none; color:var(--white);}
 
 
 
