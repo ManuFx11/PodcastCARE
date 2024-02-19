@@ -7,6 +7,7 @@
     --ancho-contenido: 1200px;
     --ancho-contenido-plus: 1000px;
     --fondo-seccion: #f7f9fc;
+    --fondo-seccion-primary: #cba03640;
 }
 
 /*Colores Predefinidos */
@@ -57,7 +58,8 @@ ul.submenu > li > a{text-decoration:none; color:var(--white);}
 .text-l{font-size:40px;}
 .text-m{font-size:34px;}
 .text-s{font-size:30px;}
-.text-xs{font-size:26px;}
+.text-xs{font-size:25px;}
+.text-xxs{font-size:20px;}
 
 /* Tamaños Parrafos */
 .text-15{font-size:15px;}
@@ -130,6 +132,7 @@ ul.submenu > li > a{text-decoration:none; color:var(--white);}
 .m-right-25{margin-right:25px;}
 .m-right-30{margin-right:30px;}
 
+.m-top-0{margin-top:0px;}
 .m-top-5{margin-top:5px;}
 .m-top-10{margin-top:10px;}
 .m-top-15{margin-top:15px;}

@@ -1,0 +1,63 @@
+---
+/* Bloques */
+import Layout from '../layouts/Layout.astro';
+import SemiBlock from '../components/SemiBlock.astro';
+import FourColumn from '../components/FourColumn.astro';
+import AnchoLimitado from '../components/recursos/AnchoLimitado.astro';
+import PlanGratis from '../components/especificos/PlanGratis.astro';
+import PlanPago from '../components/especificos/PlanPago.astro';
+
+/* Recursos */
+import diagramaCare from '../../public/recursos/diagrama-care.webp';
+import { Image } from 'astro:assets';
+---
+<Layout title="Qué queremos conseguir - CARE">
+
+    <!-- Sectión 1 -->
+    <AnchoLimitado id="presentacion-que-queremos" backgroundColor="#FFF">
+        <div slot="contenido" style="margin-bottom:80px;padding-top:40px;">
+            <h1 class="text-l fw-500">¿Qué queremos conseguir?</h4>
+            <p class="lh-35 color-secundary text-16">Nuestra misión es fomentar una comunidad de profesionales y emprendedores comprometidos con la excelencia, la ética y la humanidad en el mundo de los negocios. Nos dedicamos a construir relaciones duraderas y significativas entre nuestros miembros, ofreciendo un espacio de confianza y respeto donde se valora el desarrollo personal tanto como el profesional.</p>
+            <p class="lh-35 color-secundary text-16">Facilitar espacios de interacción donde los miembros puedan compartir experiencias, conocimientos y valores, construyendo relaciones profundas y significativas que beneficien tanto el desarrollo personal como profesional.</p>
+        </div>
+     </AnchoLimitado>
+
+     <!-- Sectión 2 -->
+     <SemiBlock backgroundColor="#f7f9fc" alignItems="center">
+		<div class="flex-basis-45" slot="left-block">
+			<p class="lh-35 color-secundary text-16">Nos enfocamos en la colaboración genuina como medio para lograr el éxito compartido, en lugar de la competencia feroz y la transaccionalidad. A través de reuniones regulares, actividades de desarrollo y proyectos de colaboración, ofrecemos oportunidades para el crecimiento profesional y el enriquecimiento personal de nuestros miembros.</p>
+			<p class="lh-35 color-secundary text-16">Nos comprometemos a actuar con integridad, transparencia y responsabilidad en todas nuestras interacciones, dentro y fuera del Club. Asimismo, nos esforzamos por ser un ejemplo de cómo se pueden alcanzar metas empresariales manteniendo un alto grado de ética y responsabilidad social.</p>	
+		</div>
+		<picture class="flex-basis-50" slot="right-block">
+			<Image class="w100 hauto" src={diagramaCare} alt="Nuestra Visión - CARE" title="Nuestra Visión - CARE"/>
+		</picture>
+		</picture>
+	</SemiBlock>
+
+    <!-- Section 3 -->
+	<AnchoLimitado id="franja-que-queremos-texto" backgroundColor="#cba03640">
+		<div slot="contenido" style="padding:60px;">
+			<p class="lh-25 color-secundary text-xxs">Nos orientamos hacia el impacto sostenible, buscando siempre maneras de contribuir positivamente a nuestra comunidad y al mundo en general. A través de la mentoría, la educación y la acción comunitaria, aspiramos a dejar una huella que vaya más allá del ámbito empresarial.</p>
+            <p class="lh-25 color-secundary text-xxs">Al vivir nuestra misión cada día, trabajamos para realizar nuestra visión de un ecosistema de negocios más ético, humano y sostenible.</p>
+		</div>
+	 </AnchoLimitado>
+
+
+      <!-- Section 4 -->
+      <AnchoLimitado id="franja-negra-texto" backgroundColor="#000">
+		<div slot="contenido" style="padding:60px;">
+			<p class="text-center text-white lh-25 text-xs">En CARE vas a tener todo lo que tienes en otros Club de empresarios pero combinando el mundo online y offline. Habrá eventos presenciales y eventos online.</p>
+		</div>
+	 </AnchoLimitado>
+
+    <!-- Section 5 -->
+     <AnchoLimitado id="block-precios" backgroundColor="#FFF">
+		<div slot="contenido" style="margin:80px 0px;">
+			<div style="column-gap:30px;" class="ancho-limitado-plus flex flex-center">
+				<PlanGratis/>
+				<PlanPago/>
+			</div>
+		</div>
+	 </AnchoLimitado>
+
+</Layout>

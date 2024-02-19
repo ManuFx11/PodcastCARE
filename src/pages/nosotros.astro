@@ -3,6 +3,9 @@
 import Layout from '../layouts/Layout.astro';
 import SemiBlock from '../components/SemiBlock.astro';
 import FourColumn from '../components/FourColumn.astro';
+import AnchoLimitado from '../components/recursos/AnchoLimitado.astro';
+import PlanGratis from '../components/especificos/PlanGratis.astro';
+import PlanPago from '../components/especificos/PlanPago.astro';
 
 /* Recursos */
 import imagen from '../../public/que-es-care.png';
@@ -99,5 +102,18 @@ import { Image } from 'astro:assets';
 		
 	</div>
 </SemiBlock>
+
+<!-- Section 6 -->
+<AnchoLimitado id="unete-care-block" backgroundColor="#f7f9fc">
+	<div slot="contenido" style="margin-bottom:80px;padding-top:60px;">
+		<h4 class="text-center m-top-0 text-l fw-500">Esas formaciones no son las que vas a encontrar aquí <br> Serán formaciones útiles y 100% aplicables en tu negocio de una forma sencilla</h4>
+		<p>En CARE vas a tener todo lo que tienes en otros Club de empresarios pero combinando el mundo online y offline. Habrá eventos presenciales y eventos online.</p>
+		<div style="column-gap:30px;" class="ancho-limitado-plus flex flex-center">
+			<PlanGratis/>
+			<PlanPago/>
+		</div>
+	</div>
+ </AnchoLimitado>
+
 
 </Layout>

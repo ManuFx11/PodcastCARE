@@ -1,0 +1,45 @@
+---
+/* Bloques */
+import Layout from '../layouts/Layout.astro';
+import SemiBlock from '../components/SemiBlock.astro';
+import FourColumn from '../components/FourColumn.astro';
+import AnchoLimitado from '../components/recursos/AnchoLimitado.astro';
+import PlanGratis from '../components/especificos/PlanGratis.astro';
+import PlanPago from '../components/especificos/PlanPago.astro';
+
+/* Recursos */
+import networking from '../../public/recursos/networking-care.webp';
+import { Image } from 'astro:assets';
+---
+<Layout title="Nuestra Visión - CARE">
+	<!--Section 1 -->
+	<SemiBlock backgroundColor="#f7f9fc" alignItems="center">
+		<div class="flex-basis-45" slot="left-block">
+			<h1 class="text-m fw-500 lh-45">Somos un Club Diferente</strong></h1>
+			<p class="lh-35 color-secundary text-16">Nuestra visión es ser una comunidad líder y referente en el ámbito de los negocios, donde las relaciones personales, la colaboración y la ética sean la base fundamental de todas nuestras acciones. Aspiramos a cambiar el paradigma de los negocios tradicionales, reemplazando la competitividad y la transaccionalidad con un enfoque en la integridad, el desarrollo mutuo y el impacto sostenible.</p>
+			<p class="lh-35 color-secundary text-16">Buscamos crear un espacio seguro y enriquecedor donde cada miembro se sienta valorado y apoyado, no solo en sus metas profesionales, sino también en su bienestar personal y crecimiento integral. Imaginamos un ecosistema de negocios donde el éxito se mida no solo por los resultados financieros, sino también por la calidad de las relaciones que cultivamos y la contribución positiva que hacemos al mundo.</p>	
+		</div>
+		<picture class="flex-basis-50" slot="right-block">
+			<Image class="w100 hauto" src={networking} alt="Nuestra Visión - CARE" title="Nuestra Visión - CARE"/>
+		</picture>
+		</picture>
+	</SemiBlock>
+
+	<!-- Section 2 -->
+	<AnchoLimitado id="franja-negra-texto" backgroundColor="#000">
+		<div slot="contenido" style="margin-bottom:80px;padding:60px;">
+			<p class="text-center text-white lh-25 text-xs">En CARE vas a tener todo lo que tienes en otros Club de empresarios pero combinando el mundo online y offline. Habrá eventos presenciales y eventos online.</p>
+		</div>
+	 </AnchoLimitado>
+
+	 <!-- Section 3 -->
+	 <AnchoLimitado id="block-precios" backgroundColor="#FFF">
+		<div slot="contenido" style="margin-bottom:80px;">
+			<div style="column-gap:30px;" class="ancho-limitado-plus flex flex-center">
+				<PlanGratis/>
+				<PlanPago/>
+			</div>
+		</div>
+	 </AnchoLimitado>
+	
+</Layout>

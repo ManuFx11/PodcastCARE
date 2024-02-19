@@ -1,0 +1,50 @@
+---
+/* Bloques */
+import Layout from '../layouts/Layout.astro';
+import SemiBlock from '../components/SemiBlock.astro';
+import FourColumn from '../components/FourColumn.astro';
+import AnchoLimitado from '../components/recursos/AnchoLimitado.astro';
+import PlanGratis from '../components/especificos/PlanGratis.astro';
+import PlanPago from '../components/especificos/PlanPago.astro';
+
+/* Recursos */
+---
+<Layout title="Nuestros Valores - CARE">
+
+    <!-- Section 1 -->
+    <AnchoLimitado id="valores-page" backgroundColor="#cba03640">
+		<div slot="contenido" style="padding:60px;">
+            <h1 class="text-s fw-500">Nuestros Valores</h1>
+			<p class="lh-30 text-17 color-secundary">Nuestra filosofía se basa en el entendimiento de que las relaciones personales sólidas y significativas son el cimiento de un éxito empresarial duradero y de una vida plena. La meta es que cada miembro se sienta apoyado y empoderado para alcanzar sus propios objetivos, entendiendo que el crecimiento colectivo beneficia a todos.</p>
+            <p class="text-20 color-secundary fw-500 m-top-30 m-bottom-30">Valores fundamentales</p>
+            <p class="text-17 lh-30 color-secundary">1. <span class="fw-500"><strong>Autencidad:</strong></span> promovemos la honestidad y la transparencia, creyendo que las relaciones genuinas se construyen en un terreno de sinceridad.</p>
+            <p class="text-17 lh-30 color-secundary">2. <span class="fw-500"><strong>Integridad Inquebrantable:</strong></span> Actuaremos con integridad en todas nuestras interacciones, priorizando la ética y la honestidad sobre cualquier ganancia a corto plazo.</p>
+            <p class="text-17 lh-30 color-secundary">3. <span class="fw-500"><strong>Relaciones por encima de todo:</strong></span> antes de buscar acuerdos o colaboraciones comerciales, buscaremos establecer relaciones personales fuertes y significativas con nuestros colegas.</p>
+            <p class="text-17 lh-30 color-secundary">4. <span class="fw-500"><strong>Empatía y respeto:</strong></span> nos esforzamos por entender las perspectivas y necesidades de los demás, abogando por un enfoque humano en el mundo de los negocios. Cada miembro es valorado por su individualidad, y nos esforzamos por entender y apreciar las perspectivas y experiencias de los demás. Trataremos a todos los miembros con empatía y respeto, independientemente de su nivel de experiencia, posición en la industria o antecedentes personales.</p>
+            <p class="text-17 lh-30 color-secundary">5. <span class="fw-500"><strong>Desarrollo personal y profesional:</strong></span> valoramos el crecimiento personal y profesional de nuestros miembros, entendiendo que una persona completa es más valiosa que la suma de sus habilidades comerciales. Fomentamos un ambiente de aprendizaje mutuo, donde el conocimiento y las experiencias se comparten libremente, reconociendo que todos tenemos algo valioso que aportar. Para nosotros el desarrollo personal es tan valorado como el éxito profesional, ayudándonos mutuamente a crecer en todas las dimensiones de la vida.</p>
+            <p class="text-17 lh-30 color-secundary">6. <span class="fw-500"><strong>Colaboración por Competencia:</strong></span> creemos que el éxito colectivo es más gratificante y sustentable que la competencia individualista. Nuestro trata de elevar a todos, no de superar a los demás. Desarrollar una mentalidad de abundancia en la cual los miembros busquen maneras de colaborar y apoyar a los demás en lugar de competir entre ellos.</p>
+            <p class="text-17 color-secundary">7. <span class="fw-500"><strong>Calidad sobre cantidad:</strong></span> No se trata del número de conexiones, sino de la profundidad y la calidad de las mismas. Preferimos tener interacciones significativas con unos pocos que relaciones superficiales con muchos.</p>
+		</div>
+	 </AnchoLimitado>
+
+     <AnchoLimitado id="valores-page2" backgroundColor="#f7f9fc">
+		<div slot="contenido" style="padding:60px;">
+            <p class="text-17 lh-30 color-secundary">8. <span class="fw-500"><strong>Compromiso a largo plazo:</strong></span> Creemos en construir relaciones que perduren en el tiempo. Buscamos que nuestros miembros se involucren y comprometan con el club y con otros miembros, construyendo una comunidad sólida y de confianza.</p>
+            <p class="text-17 lh-30 color-secundary">9. <span class="fw-500"><strong>Oportunidades comerciales:</strong></span> Aunque el enfoque principal es en la relación, entendemos que estas conexiones llevarán a oportunidades comerciales. Cuando esto suceda, fomentamos acuerdos que beneficien a todas las partes involucradas.</p>
+            <p class="text-17 lh-30 color-secundary">10. <span class="fw-500"><strong>Diversidad e inclusión:</strong></span> Celebramos la diversidad y promovemos la inclusión en todos los niveles, creando un espacio donde todos se sientan bienvenidos y valorados. Reconocer y celebrar la diversidad en todas sus formas, incluyendo género, raza, orientación sexual, creencias y antecedentes, para construir una comunidad más rica y versátil.</p>
+            <p class="text-17 lh-30 color-secundary">11. <span class="fw-500"><strong>Generosidad:</strong></span> Fomentar una cultura de dar antes de recibir, ya sea a través del tiempo, el conocimiento o los recursos. La colaboración es la piedra angular de nuestra comunidad. Nos apoyaremos mutuamente en nuestras metas y desafíos, tanto profesionales como personales. Aportar valor a la comunidad mediante la compartición de conocimientos, experiencias y recursos sin esperar algo a cambio de inmediato.</p>
+            <p class="text-17 lh-30 color-secundary">12. <span class="fw-500"><strong>Escucha activa:</strong></span> Crear mecanismos de retroalimentación constantes entre los miembros para entender sus necesidades, preocupaciones y aspiraciones.</p>
+            <p class="text-17 lh-30 color-secundary">13. <span class="fw-500"><strong>Confidencialidad:</strong></span> Respetar la privacidad y la confidencialidad de las conversaciones y acuerdos dentro del club.</p>
+        </div>
+	 </AnchoLimitado>
+   
+
+     <AnchoLimitado id="block-precios" backgroundColor="#FFF">
+		<div slot="contenido" style="margin:80px 0px;">
+			<div style="column-gap:30px;" class="ancho-limitado-plus flex flex-center">
+				<PlanGratis/>
+				<PlanPago/>
+			</div>
+		</div>
+	 </AnchoLimitado>
+</Layout>
