@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Podcasts from '../components/Podcasts.astro';
 import cabeceraFondo from '../../public/PodcastsCare.webp';
+import PodcastReact from '../components/PodcastReact';
 ---
 
 <Layout title="Podcast CARE">
@@ -19,7 +20,7 @@ import cabeceraFondo from '../../public/PodcastsCare.webp';
 
 	<main>		
 		<center><h1 class="cabecera-titulo">Últimos <span class="text-gradient">Podcast</span></h1></center>
-		<!-- <Podcasts client:visible/>-->
+		<PodcastReact></PodcastReact>
 	</main>
 </Layout>
 <style>
