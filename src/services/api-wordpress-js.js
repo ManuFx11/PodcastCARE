@@ -17,7 +17,6 @@ export async function getPodcastWordpressGraphQL() {
                 nodes {
                   id
                   title
-                  content
                   featuredImage {
                     node {
                       mediaItemUrl

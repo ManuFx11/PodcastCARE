@@ -1,5 +1,6 @@
 import { useEffect, useState} from 'react'
 import { getPodcastWordpressGraphQL } from '../../services/api-wordpress-js';
+import { pruebaNemo } from '../../services/api-wordpress';
 
 const ReactPodcast = () => {
 
@@ -7,8 +8,9 @@ const ReactPodcast = () => {
     const [loading, setLoading] = useState(true);
 
     const getData = async () => {
-        const resultados = await getPodcastWordpressGraphQL();
-        setData(resultados.podcasts.nodes);
+        //const resultados = await getPodcastWordpressGraphQL();
+        const resultados = await pruebaNemo();
+        setData(resultados.posts.nodes);
         //Mejorar el loading
         setLoading(false);
     }
@@ -19,7 +21,7 @@ const ReactPodcast = () => {
 
     if(loading){
         return(
-            <h1 className="text-black text-xxl">Cargando...</h1>
+            <h1 className="text-black text-m">Cargando...</h1>
         )
     }else{
         return (
@@ -41,11 +43,7 @@ const ReactPodcast = () => {
                 })
             }
         </div>
-          )
-        
+          )   
     }
-
-
 }
-
 export default ReactPodcast
