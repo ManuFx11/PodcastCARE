@@ -28,10 +28,10 @@ const ReactPodcast = () => {
             <div id="listado-podcast">
             {
                 data.map((item) => {
-                    let imagen = item.featuredImage.node.mediaItemUrl;
+                    //let imagen = item.featuredImage.node.mediaItemUrl;
                     return(
                         <div>
-                        <img src={imagen} width="100%" height="270px" alt="Podcast"/>
+                       
                             <div class="item-podcast">
                             <h3>{item.title}</h3>
                             <hr/>
